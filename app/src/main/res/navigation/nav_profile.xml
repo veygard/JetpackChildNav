@@ -22,5 +22,5 @@
         <action
                 android:id="@+id/action_profileTwoFragment_to_profileOneFragment2"
                 app:destination="@id/profileOneFragment" />
-    </fragment>
+    </fragment><action android:id="@+id/action_global_profileTwoFragment" app:destination="@id/profileTwoFragment"/>
 </navigation>

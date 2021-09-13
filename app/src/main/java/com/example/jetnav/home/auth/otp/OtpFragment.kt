@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -50,6 +51,12 @@ class OtpFragment : Fragment() {
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(onClick = { otpRouter.routeMain() }) {
                     Text(text = "Back to Home")
+                }
+                Spacer(modifier = Modifier.height(10.dp))
+                Button(
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    onClick = { otpRouter.routeToProfileNav() }) {
+                    Text(text = "Global to Profile Nav Home")
                 }
             }
 

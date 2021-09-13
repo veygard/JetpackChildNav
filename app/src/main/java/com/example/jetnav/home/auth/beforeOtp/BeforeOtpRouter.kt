@@ -30,10 +30,10 @@ class BeforeOtpRouterImpl(
     }
 
     override fun routeToProfileNav() {
-        fragment.findNavController().navigate(R.id.action_global_to_profile_nav)
+        fragment.findNavController().navigate(R.id.action_global_to_profile_nav2)
     }
 
     override fun routeToProfileTwoFragment() {
-
+        fragment.findNavController().navigate(R.id.action_global_profileTwoFragment)
     }
 }

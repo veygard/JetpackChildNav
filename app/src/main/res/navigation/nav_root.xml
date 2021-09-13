@@ -11,7 +11,7 @@
                 android:id="@+id/action_global_homeFragment"
                 app:destination="@id/homeFragment" />
         <action
-                android:id="@+id/action_global_to_profile_nav"
+                android:id="@+id/action_global_to_profile_nav2"
                 app:destination="@id/to_profile_nav" />
     </navigation>
     <fragment

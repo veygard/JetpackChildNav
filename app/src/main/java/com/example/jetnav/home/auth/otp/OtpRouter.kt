@@ -9,6 +9,7 @@ interface OtpRouter {
     fun routeBack()
     fun routeMain()
     fun routeToBeforeOtp()
+    fun routeToProfileNav()
 }
 
 class OtpRouterImpl(
@@ -25,5 +26,9 @@ class OtpRouterImpl(
 
     override fun routeToBeforeOtp() {
         fragment.findNavController().navigate(R.id.action_otpFragment_to_beforeOtpFragment2)
+    }
+
+    override fun routeToProfileNav() {
+        fragment.findNavController().navigate(R.id.action_global_to_profile_nav2)
     }
 }
