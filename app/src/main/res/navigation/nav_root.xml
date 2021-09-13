@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_root"
+        app:startDestination="@id/homeFragment">
+
+    <navigation android:id="@+id/to_auth_nav"
+            app:startDestination="@id/nav_auth">
+        <include app:graph="@navigation/nav_auth" />
+        <action
+                android:id="@+id/action_global_homeFragment"
+                app:destination="@id/homeFragment" />
+        <action
+                android:id="@+id/action_global_to_profile_nav"
+                app:destination="@id/to_profile_nav" />
+    </navigation>
+    <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.example.jetnav.home.HomeFragment"
+            android:label="HomeFragment" >
+        <action
+                android:id="@+id/action_homeFragment_to_to_auth_nav"
+                app:destination="@id/to_auth_nav" />
+        <action
+                android:id="@+id/action_homeFragment_to_to_profile_nav"
+                app:destination="@id/to_profile_nav" />
+    </fragment>
+    <navigation android:id="@+id/to_profile_nav"
+            app:startDestination="@id/nav_profile">
+        <include app:graph="@navigation/nav_profile" />
+        <action
+                android:id="@+id/action_global_homeFragment2"
+                app:destination="@id/homeFragment" />
+        <action
+                android:id="@+id/action_global_homeFragment3"
+                app:destination="@id/homeFragment" />
+        <action
+                android:id="@+id/action_global_homeFragment4"
+                app:destination="@id/homeFragment" />
+    </navigation>
+</navigation>

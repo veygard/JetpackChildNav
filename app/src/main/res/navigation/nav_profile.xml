@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_profile"
+        app:startDestination="@id/profileOneFragment">
+
+    <fragment
+            android:id="@+id/profileOneFragment"
+            android:name="com.example.jetnav.home.profile.profileFragmentOne.ProfileOneFragment"
+            android:label="ProfileOneFragment" >
+        <action
+                android:id="@+id/action_profileOneFragment_to_profileTwoFragment"
+                app:destination="@id/profileTwoFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/profileTwoFragment"
+            android:name="com.example.jetnav.home.profile.profileFragmentTwo.ProfileTwoFragment"
+            android:label="ProfileTwoFragment" >
+        <action
+                android:id="@+id/action_profileTwoFragment_to_profileOneFragment"
+                app:destination="@id/profileOneFragment" />
+        <action
+                android:id="@+id/action_profileTwoFragment_to_profileOneFragment2"
+                app:destination="@id/profileOneFragment" />
+    </fragment>
+</navigation>
