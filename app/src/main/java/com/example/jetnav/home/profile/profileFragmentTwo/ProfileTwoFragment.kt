@@ -1,5 +1,6 @@
 package com.example.jetnav.home.profile.profileFragmentTwo
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,17 +18,25 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import com.example.jetnav.R
 
 @ExperimentalComposeUiApi
 class ProfileTwoFragment : Fragment() {
-
+companion object{
+    @SuppressLint("StaticFieldLeak")
+    var navController:NavController? = null
+}
     private val profileTwoRouter by lazy {
         ProfileTwoRouterImpl(fragment = this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val nestedNavHostFragment = childFragmentManager.findFragmentById(R.id.profileTwoFragment) as? NavHostFragment
+        navController = nestedNavHostFragment?.navController
     }
 
     override fun onCreateView(
@@ -46,25 +55,26 @@ class ProfileTwoFragment : Fragment() {
                 Text(text = "Profile Two", fontSize = 30.sp)
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Magenta),
                     onClick = { profileTwoRouter.routeToProfileOne() }) {
                     Text(text = "To Profile One Fragment")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray),
                     onClick = { profileTwoRouter.routeMain() }) {
                     Text(text = "Back to Home")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red),
-                    onClick = { }) {
-                    Text(text = "Nav to Otp?")
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    onClick = { profileTwoRouter.routeToOtpFragment()}) {
+                    Text(text = "Nav to Otp")
                 }
             }
         }
         return view
     }
+
 
 }

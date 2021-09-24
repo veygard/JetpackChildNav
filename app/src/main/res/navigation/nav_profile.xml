@@ -22,5 +22,11 @@
         <action
                 android:id="@+id/action_profileTwoFragment_to_profileOneFragment2"
                 app:destination="@id/profileOneFragment" />
-    </fragment><action android:id="@+id/action_global_profileTwoFragment" app:destination="@id/profileTwoFragment"/>
+    </fragment>
+    <action
+            android:id="@+id/action_global_profileTwoFragment"
+            app:destination="@id/profileTwoFragment"
+            app:popUpTo="@id/profileTwoFragment"
+            app:popUpToInclusive="true"
+            app:launchSingleTop="false" />
 </navigation>

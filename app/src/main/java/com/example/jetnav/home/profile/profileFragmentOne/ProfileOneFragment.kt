@@ -46,13 +46,13 @@ class ProfileOneFragment : Fragment() {
                 Text(text = "Profile One", fontSize = 30.sp)
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Magenta),
                     onClick = { profileOneRouter.routeToProfileTwo() }) {
                     Text(text = "To Profile Two Fragment")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray),
                     onClick = { profileOneRouter.routeMain() }) {
                     Text(text = "Back to Home")
                 }

@@ -13,6 +13,9 @@
         <action
                 android:id="@+id/action_global_to_profile_nav2"
                 app:destination="@id/to_profile_nav" />
+        <action
+                android:id="@+id/action_global_nav_profile"
+                app:destination="@id/nav_profile" />
     </navigation>
     <fragment
             android:id="@+id/homeFragment"
@@ -24,6 +27,9 @@
         <action
                 android:id="@+id/action_homeFragment_to_to_profile_nav"
                 app:destination="@id/to_profile_nav" />
+        <action
+                android:id="@+id/action_homeFragment_to_nav_profile"
+                app:destination="@id/nav_profile" />
     </fragment>
     <navigation android:id="@+id/to_profile_nav"
             app:startDestination="@id/nav_profile">
@@ -38,4 +44,6 @@
                 android:id="@+id/action_global_homeFragment4"
                 app:destination="@id/homeFragment" />
     </navigation>
+    <include app:graph="@navigation/nav_profile" />
+    <action android:id="@+id/action_global_home" app:destination="@id/homeFragment" />
 </navigation>

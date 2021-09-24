@@ -20,8 +20,9 @@ class ProfileOneRouterImpl(
     }
 
     override fun routeMain() {
-        fragment.findNavController().navigate(R.id.action_global_homeFragment4)
-
+        val navController = fragment.findNavController()
+        navController.setGraph(R.navigation.nav_root)
+        navController.navigate(R.id.action_global_home)
     }
 
     override fun routeToProfileTwo() {

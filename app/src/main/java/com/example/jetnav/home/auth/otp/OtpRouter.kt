@@ -10,6 +10,7 @@ interface OtpRouter {
     fun routeMain()
     fun routeToBeforeOtp()
     fun routeToProfileNav()
+    fun routeToProfileTwo()
 }
 
 class OtpRouterImpl(
@@ -21,7 +22,9 @@ class OtpRouterImpl(
     }
 
     override fun routeMain() {
-        fragment.findNavController().navigate(R.id.action_global_homeFragment)
+        val navController = fragment.findNavController()
+        navController.setGraph(R.navigation.nav_root)
+        navController.navigate(R.id.action_global_home)
     }
 
     override fun routeToBeforeOtp() {
@@ -30,5 +33,11 @@ class OtpRouterImpl(
 
     override fun routeToProfileNav() {
         fragment.findNavController().navigate(R.id.action_global_to_profile_nav2)
+    }
+
+    override fun routeToProfileTwo() {
+        val navController = fragment.findNavController()
+        navController.setGraph(R.navigation.nav_profile)
+        navController.navigate(R.id.action_global_profileTwoFragment)
     }
 }

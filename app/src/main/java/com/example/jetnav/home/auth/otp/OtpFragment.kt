@@ -45,18 +45,22 @@ class OtpFragment : Fragment() {
             ) {
                 Text(text = "Otp Fragment", fontSize = 30.sp)
                 Spacer(modifier = Modifier.height(10.dp))
-                Button(onClick = { otpRouter.routeToBeforeOtp() }) {
+                Button(
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    onClick = { otpRouter.routeToBeforeOtp() }) {
                     Text(text = "To Before Otp Fragment")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
-                Button(onClick = { otpRouter.routeMain() }) {
+                Button(
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray),
+                    onClick = { otpRouter.routeMain() }) {
                     Text(text = "Back to Home")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
-                    onClick = { otpRouter.routeToProfileNav() }) {
-                    Text(text = "Global to Profile Nav Home")
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Magenta),
+                    onClick = { otpRouter.routeToProfileTwo() }) {
+                    Text(text = "To ProfileTwo")
                 }
             }
 

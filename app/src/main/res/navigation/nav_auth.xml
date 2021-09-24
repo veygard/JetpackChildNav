@@ -22,5 +22,5 @@
         <action
                 android:id="@+id/action_otpFragment_to_beforeOtpFragment2"
                 app:destination="@id/beforeOtpFragment" />
-    </fragment>
+    </fragment><action android:id="@+id/action_global_otpFragment" app:destination="@id/otpFragment"/>
 </navigation>

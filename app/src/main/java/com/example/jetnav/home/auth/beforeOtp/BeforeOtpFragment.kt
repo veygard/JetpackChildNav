@@ -52,7 +52,7 @@ class BeforeOtpFragment : Fragment() {
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray),
                     onClick = {
                         beforeOtpRouter.routeMain()
                     }) {
@@ -60,15 +60,15 @@ class BeforeOtpFragment : Fragment() {
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Magenta),
                     onClick = { beforeOtpRouter.routeToProfileNav() }) {
                     Text(text = "Global to Profile Nav Home")
                 }
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Red),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Magenta),
                     onClick = {beforeOtpRouter.routeToProfileTwoFragment() }) {
-                    Text(text = "Route to Profile Two?")
+                    Text(text = "Route to Profile Two")
                 }
             }
 

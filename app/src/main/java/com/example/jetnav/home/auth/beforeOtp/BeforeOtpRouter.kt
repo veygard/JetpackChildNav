@@ -1,5 +1,6 @@
 package com.example.jetnav.home.auth.beforeOtp
 
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.jetnav.R
@@ -13,6 +14,7 @@ interface BeforeOtpRouter {
     fun routeToProfileTwoFragment()
 }
 
+@ExperimentalComposeUiApi
 class BeforeOtpRouterImpl(
     private val fragment: Fragment
 ) : BeforeOtpRouter {
@@ -22,7 +24,9 @@ class BeforeOtpRouterImpl(
     }
 
     override fun routeMain() {
-        fragment.findNavController().navigate(R.id.action_global_homeFragment)
+        val navController = fragment.findNavController()
+        navController.setGraph(R.navigation.nav_root)
+        navController.navigate(R.id.action_global_home)
     }
 
     override fun routeToOtp() {
@@ -34,6 +38,8 @@ class BeforeOtpRouterImpl(
     }
 
     override fun routeToProfileTwoFragment() {
-        fragment.findNavController().navigate(R.id.action_global_profileTwoFragment)
+        val navController = fragment.findNavController()
+        navController.setGraph(R.navigation.nav_profile)
+        navController.navigate(R.id.action_global_profileTwoFragment)
     }
 }
